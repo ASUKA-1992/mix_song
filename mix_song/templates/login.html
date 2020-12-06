@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/static/js/jquery-3.5.1.min.js"></script>
+    <title>MIX SONG</title>
+</head>
+<body>
+    <div>パスワードを入力してください</div>
+    <form id="form" action="{% url 'mix_song:check_password' %}" method="POST">
+        {% csrf_token %}
+        <input type="password" name="password" maxlength="10">
+        <input type="submit" value="ログイン">
+    </form>
+</body>
+
+</html>
